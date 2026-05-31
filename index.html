@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>پیام امروز ❤️</title>
+
+<style>
+body{
+    margin:0;
+    background:#ffe6f0;
+    font-family:tahoma;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    max-width:600px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+h1{
+    color:#ff4f8b;
+}
+
+#msg{
+    font-size:1.4rem;
+    line-height:2;
+}
+
+.heart{
+    position:fixed;
+    font-size:25px;
+    animation:float 8s linear infinite;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-120px);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>💌مامان </h1>
+    <p id="msg">  خیلی گشنمه❤️</p>
+</div>
+
+<script>
+for(let i=0;i<20;i++){
+    const h=document.createElement('div');
+    h.className='heart';
+    h.textContent='❤️';
+    h.style.left=Math.random()*100+'vw';
+    h.style.animationDelay=Math.random()*8+'s';
+    document.body.appendChild(h);
+}
+</script>
+
+</body>
+</html>
